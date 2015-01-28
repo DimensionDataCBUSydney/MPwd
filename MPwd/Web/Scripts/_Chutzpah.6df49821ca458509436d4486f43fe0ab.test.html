@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jasmine Spec Runner</title>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/Mohsen/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/winnujfv.0zl/TestFiles/jasmine/v2/jasmine.css"/>
+<script type="text/javascript" src="file:///C:/Users/Mohsen/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/winnujfv.0zl/TestFiles/jasmine/v2/jasmine.js"></script>
+<script type="text/javascript" src="file:///C:/Users/Mohsen/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/winnujfv.0zl/TestFiles/jasmine/v2/jasmine-html.js"></script>
+<script type="text/javascript" src="file:///C:/Users/Mohsen/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/winnujfv.0zl/TestFiles/jasmine/v2/boot.js"></script>
+<link rel="shortcut icon" type="image/png" href="file:///C:/Users/Mohsen/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/winnujfv.0zl/TestFiles/jasmine/v2/jasmine_favicon.png"/>
+
+    
+    
+    
+    <script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular.min.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-animate.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-cookies.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-mocks.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-resource.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-route.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-sanitize.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/vendor/angular-touch.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/underscore.min.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/_references.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/services.js"></script>
+<script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/controllers.js"></script>
+
+    <script type="text/javascript" src="file:///C:/Source/Playground/MPwd/Web/Scripts/controllers.spec.js"></script>
+
+    <script type="text/javascript">
+
+        (function () {
+            var amdTestPath = "";
+            if (window.require && typeof window.require === "function" && amdTestPath !== "") {
+                if (window.chutzpah) {
+                    window.chutzpah.usingModuleLoader = true;
+                }
+
+                requirejs.config({
+                    map: {
+                        '*': {
+                            
+                            }
+                    }
+                });
+
+                window.require([amdTestPath], function () {
+
+                    console.log("!!_!! Stating Jasmine from AMD callback...");
+                    window.initializeJasmine();
+                });
+            }
+            else {
+                var currentWindowOnload = window.onload;
+
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    window.initializeJasmine();
+                };
+            }
+
+        })();
+    </script>
+</head>
+<body>
+</body>
+</html>
