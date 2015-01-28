@@ -17,9 +17,9 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 controller: 'HomeCtrl'
 
             })
-            .state('about', {
-                url: '/about',
-                templateUrl: '/views/about',
+            .state('signup', {
+                url: '/signup',
+                templateUrl: '/views/signup',
                 controller: 'SignupCtrl'
             })
             .state('login', {

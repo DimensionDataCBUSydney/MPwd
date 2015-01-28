@@ -21,8 +21,11 @@ app.directive('keyLogger', function()
 		elm.bind('blur', function()
 		{
 			var mPassword = '';
-			_.last(pressedKeys).duration = 0;
-			_.each(pressedKeys, function(key) { mPassword += '[' + key.key + ':' + key.duration + ']'; });
+			if (pressedKeys.length > 0)
+			{
+				_.last(pressedKeys).duration = 0;
+				_.each(pressedKeys, function(key) { mPassword += '[' + key.key + ':' + key.duration + ']'; });
+			}
 			pressedKeys = [];
 			scope.MPassword = mPassword;
 		});
@@ -34,6 +37,7 @@ app.directive('keyLogger', function()
 					return;
 				}
 				matchedKey.up = new Date();
+				// TODO: The following logic is only measuring the time the key has been pressed not the delay between them.
 				matchedKey.duration = matchedKey.up.getTime() - matchedKey.down.getTime();
 				elm[0].style.backgroundColor = "white";
 				_.each(pressedKeys, function(key) { console.log(key.key + " " + key.duration); });
@@ -45,7 +49,7 @@ app.directive('keyLogger', function()
 				{
 					return;
 				}
-				var allowedKeys = attrs.mode == 'numpad' ? function(code) { return code >= 96 && code <= 105; } : function() { return false; };
+				var allowedKeys = attrs.mode == 'numpad' ? function(code) { return code >= 96 && code <= 105; } : function() { return true; };
 				if (!allowedKeys(evt.which))
 				{
 					return;

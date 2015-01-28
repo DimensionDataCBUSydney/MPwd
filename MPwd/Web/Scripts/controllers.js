@@ -13,7 +13,7 @@ angular.module('app.controllers', [])
 		});
 	}])
 
-	// Path: /about
+	// Path: /signup
 	.controller('SignupCtrl', ['$scope', '$location', '$window', 'passwordservice',
 		function($scope, $location, $window, passwordservice)
 		{
@@ -21,6 +21,7 @@ angular.module('app.controllers', [])
 			$scope.signup = function()
 			{
 				passwordservice.store($scope.userName, $scope.MPassword);
+				alert('The password is:' + passwordservice.getMPassword());
 				$location.path('/');
 				return false;
 			}
